@@ -5,4 +5,5 @@ const teste = import.meta.env.VITE_TEST_ENV;
   <h1>{{ teste }}</h1>
 </template>
 
-<style scoped></style>
+<style scoped lang="sass">
+</style>
