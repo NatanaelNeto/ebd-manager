@@ -1,0 +1,42 @@
+@use 'variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Squada+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+
+    background-color: $bgColor;
+    color: $textColor;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+.text-title {
+    font-family: "Squada One", sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
