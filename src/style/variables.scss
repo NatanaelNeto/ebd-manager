@@ -1,3 +1,31 @@
 $bgColor: #f2f3f4;
 
 $textColor:#121418;
+
+$borderColor: #121418;
+$shadowColor: #121418;
+
+$goldColor: #FFD700;
+$silverColor: #C0C0C0;
+$bronzeColor: #CD7F32;
+
+.ns {
+    &-rounded {
+        border-radius: 8px;
+    }
+    &-shadow {
+        box-shadow: 4px 4px 0px $shadowColor;
+    }
+
+    &-gold-medal {
+        background-color: $goldColor;
+    }
+
+    &-silver-medal {
+        background-color: $silverColor;
+    }
+
+    &-bronze-medal {
+        background-color: $bronzeColor;
+    }
+}
