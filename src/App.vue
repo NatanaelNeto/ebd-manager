@@ -12,7 +12,7 @@ const loadGuestData = async () => {
   loadingData.value = true;
   try {
     const data = await dataService.getData();
-    guestData.value = data.sort((a, b) => b.Total - a.Total);
+    guestData.value = data.sort((a, b) => b.Total - a.Total || b["Bíblia"] - a["Bíblia"] || b["Farm de Aura"] - a["Farm de Aura"] || a["Perda de Aura"] - b["Perda de Aura"]);
   } catch (error) {
     alert(error);
   } finally {
@@ -71,7 +71,7 @@ onMounted(() => {
       </div>
       <div v-if="guestData.length > 3" v-for="(guest, index) in guestData.slice(3)" :key="index"
         class="nesn-card ns-rounded nesn-cardlist">
-        <div class="nesn-cardlist-name">
+        <div class="nesn-cardlist-namelist">
           <p class="text-title">{{ guest.Nome }}</p>
           <p>{{ guest.Total }} Pontos</p>
         </div>
@@ -109,6 +109,18 @@ onMounted(() => {
     flex-flow: row wrap;
     align-items: center;
     gap: 10px;
+
+    &-namelist {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      p.text-title {
+        font-size: 1.15rem;
+      }
+    }
   }
 }
 </style>

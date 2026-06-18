@@ -1,5 +1,5 @@
 export type GuestType = {
-    "Bíblia": string,
+    "Bíblia": number,
     "Comportamento": number,
     "Farm de Aura": number,
     "Nome": string,
